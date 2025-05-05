@@ -1,0 +1,324 @@
+:root {
+    --cream-coklat: #F5E8D7;
+    --coklat-muda: #D7B98D;
+    --coklat-tua: #8B5A2B;
+    --teks-coklat: #4A3A28;
+    --cream-putih: #FFF9F0;
+    
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cream-coklat);
+    color: var(--teks-coklat);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(rgba(139, 90, 43, 0.9), rgba(139, 90, 43, 0.95));
+    position: relative;
+    overflow: hidden;
+    padding: 0px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Tambahkan animasi daun */
+.leaf {
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    z-index: 0;
+    animation: falling linear infinite;
+}
+
+@keyframes falling {
+    0% {
+        transform: translateY(-10%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(110vh) rotate(360deg);
+    }
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo-img {
+    height: 120px;
+    width: auto;
+}
+
+/* Navigation Styles */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+nav ul li {
+    position: relative;
+    padding: 10px 0;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--cream-putih);
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 15px;
+    position: relative;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+
+/* Hover Animation Effects */
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: #FFD700;
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+nav ul li a:hover {
+    color: #FFD700;
+}
+
+nav ul li a:hover::before {
+    width: 80%;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 215, 0, 0.1);
+    border-radius: 4px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+nav ul li a:hover::after {
+    transform: scale(1);
+}
+
+/* Content Container Styles */
+.content-container {
+    display: flex;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 40px auto;
+    min-height: 400px;
+}
+
+.text-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-content {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right bottom;
+    max-height: 400px;
+}
+
+.text-content h2 {
+    font-size: 2.2rem;
+    color: var(--coklat-tua);
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--teks-coklat);
+}
+
+/* E-Book Options */
+.ebook-options {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 0;
+}
+
+.option-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.option-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.option-content {
+    padding: 25px;
+}
+
+.option-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--coklat-tua);
+}
+
+.option-desc {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Button Styles */
+.btn {
+    display: inline-block;
+    background-color: var(--coklat-tua);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #6B4423;
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--coklat-tua);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-icons {
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .content-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    .image-content {
+        order: -1;
+        height: 250px;
+    }
+    
+    .image-content img {
+        max-height: 250px;
+        object-position: center;
+    }
+    
+    .text-content {
+        padding: 30px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .text-content p {
+        font-size: 1rem;
+    }
+    
+    .option-title {
+        font-size: 1.3rem;
+    }
+    
+    .option-desc {
+        font-size: 0.9rem;
+    }
+    
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}

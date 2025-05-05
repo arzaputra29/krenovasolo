@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download - TuntunLaku</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --coklat-tua: #8B5A2B;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: var(--coklat-tua);
+            color: white;
+            padding: 1rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-img {
+            width: 120px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        .download-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 3rem;
+        }
+
+        .download-btn {
+            background-color: var(--coklat-tua);
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            margin: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #3b1e1e;
+        }
+
+        footer {
+            background-color: var(--coklat-tua);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+        }
+
+        .social-icons a:hover {
+            color: #ccc;
+        }
+
+        .emoji-hujan {
+            position: absolute;
+            top: -50px;
+            z-index: 999;
+            animation-name: jatuh;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+
+        @keyframes jatuh {
+            to {
+                transform: translateY(110vh);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .download-btn {
+                padding: 12px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="../index.html"><img src="../logo.svg" alt="Logo TuntunLaku" class="logo-img"></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="detail.html">Detail Produk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <div class="page-header">
+            <h1>Halaman Download</h1>
+            <p>Unduh E-Book inovasi TuntunLaku</p>
+        </div>
+        
+        <div class="download-container">
+            <a href="https://drive.google.com/file/d/1hs3im17nko3gL6F77lsOY1ItK13c8sUZ/view?usp=sharing" class="download-btn" download>
+                Unduh E-Book TuntunLaku
+            </a>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Beranda</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Kebijakan Privasi</a>
+            <a href="#">Kontak</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://wa.me/6281234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/tuntunlaku?igsh=MXVva25yOXA5OThwbQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2025 TuntunLaku. Semua hak dilindungi.</p>
+    </footer>
+
+    <script>
+        const emojis = ["😊", "💡", "✨", "🤝", "🌟", "😎"];
+        const jumlahEmote = 30;
+        const header = document.querySelector("header");
+
+        for (let i = 0; i < jumlahEmote; i++) {
+            let emote = document.createElement("div");
+            emote.classList.add("emoji-hujan");
+            emote.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+            emote.style.left = Math.random() * 100 + "%";
+            emote.style.animationDuration = 2 + Math.random() * 3 + "s";
+            emote.style.fontSize = (16 + Math.random() * 24) + "px";
+            header.appendChild(emote);
+        }
+    </script>
+</body>
+</html>

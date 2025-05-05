@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Kami - TuntunLaku</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Variabel untuk warna */
+        :root {
+            --coklat-tua: #8B5A2B;
+        }
+
+        /* Pengaturan umum untuk body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--coklat-tua);
+            color: white;
+            padding: 1rem 0;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-img {
+            width: 120px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Container utama */
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* Halaman Judul */
+        .page-header {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .page-header p {
+            font-size: 1.1rem;
+            color: #555;
+        }
+
+        /* Container Anggota Tim */
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .team-member {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            overflow: hidden;
+            width: 240px;
+            text-align: center;
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+
+        .member-image {
+            width: 100%;
+            aspect-ratio: 2 / 3;
+            background-size: cover;
+            background-position: center top;
+            border-radius: 10px 10px 0 0;
+            border-bottom: 3px solid var(--coklat-tua);
+        }
+
+        .member-info {
+            padding: 1rem;
+        }
+
+        .member-info h3 {
+            margin-top: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .position {
+            color: #777;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        .bio {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .social-links a {
+            margin: 0 5px;
+            color: #555;
+        }
+
+        .social-links a:hover {
+            color: var(--coklat-tua);
+        }
+
+        /* Tentang Tim */
+        .about-team {
+            text-align: center;
+            margin: 2rem 0;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .about-team h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .about-team p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-team .btn {
+            background-color: var(--coklat-tua);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .about-team .btn:hover {
+            background-color: #3b1e1e;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--coklat-tua); /* Sama dengan header */
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+        }
+
+        .social-icons a:hover {
+            color: #ccc;
+        }
+
+        /* Responsif */
+        @media (max-width: 768px) {
+            .team-member {
+                max-width: 250px;
+            }
+
+            .team-container {
+                justify-content: space-around;
+            }
+
+            .about-team {
+                padding: 1.5rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="../index.html"><img src="../logo.svg" alt="Logo TuntunLaku" class="logo-img"></a>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Beranda</a></li>
+                    <li><a href="detail.html">Detail Produk</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <!-- Judul Halaman -->
+        <div class="page-header">
+            <h1>Profil Tim Inovasi TuntunLaku</h1>
+            <p>Kenali tim yang mendukung pengembangan teknologi untuk penyandang tunanetra</p>
+        </div>
+        
+        <!-- Container Anggota Tim -->
+        <div class="team-container">
+            <!-- Anggota 1 -->
+            <div class="team-member">
+                <div class="member-image" style="background-image: url('images/fotoarza.jpg');"></div>
+                <div class="member-info">
+                    <h3>Surya Arza Putra</h3>
+                    <p class="position">Ketua Tim</p>
+                    <p class="bio">Mengawasi dan mengarahkan seluruh pengembangan produk, terutama pada sisi perangkat keras dan inovasi teknis.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/6285228119533" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/suryaarzaputra_?igsh=MWl2aTI2cTdkOHNyYw==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Anggota 2 -->
+            <div class="team-member">
+                <div class="member-image" style="background-image: url('images/fotofadhil.jpg');"></div>
+                <div class="member-info">
+                    <h3>Muhammad Fadhil</h3>
+                    <p class="position">Anggota</p>
+                    <p class="bio">Membantu dalam desain dan pengembangan aplikasi perangkat lunak, serta integrasi produk dengan sistem yang lebih luas.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/62895613966599" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/flow._dhilzz?igsh=dnR1d2VwYm9rdmZo" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Anggota 3 -->
+            <div class="team-member">
+                <div class="member-image" style="background-image: url('images/fotoray.jpg');"></div>
+                <div class="member-info">
+                    <h3>Muhammad Rayendra</h3>
+                    <p class="position">Anggota</p>
+                    <p class="bio">Bertanggung jawab dalam riset dan pengembangan teknologi, serta membantu dalam pengujian dan evaluasi prototipe produk.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/6285159122869" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/nchsray?igsh=MTZlYWJsbGV0d2p0Ng==" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- Anggota 4 -->
+            <div class="team-member">
+                <div class="member-image" style="background-image: url('images/fotobian.jpg');"></div>
+                <div class="member-info">
+                    <h3>Muhammad Fabian Eka Putra G.</h3>
+                    <p class="position">Anggota</p>
+                    <p class="bio">Mendalami pemrograman dan analisis masalah, mencari solusi kreatif untuk menghadirkan produk yang mudah digunakan oleh penyandang tunanetra.</p>
+                    <div class="social-links">
+                        <a href="https://wa.me/6281327735453" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/fbn_ivn?igsh=dmN3Y3Y0em1kdTVv" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tentang Tim -->
+        <section class="about-team">
+            <h2>Tentang Kami</h2>
+            <p>Kami adalah tim yang berkomitmen untuk membantu meningkatkan kualitas hidup penyandang tunanetra dengan inovasi teknologi. Kami bekerja bersama-sama dengan semangat dan keahlian untuk menciptakan solusi yang bermanfaat.</p>
+            <a href="../index.html" class="btn">Kembali ke Beranda</a>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html">Beranda</a>
+            <a href="#">Tentang Kami</a>
+            <a href="#">Kebijakan Privasi</a>
+            <a href="#">Kontak</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://wa.me/6281234567890" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/tuntunlaku?igsh=MXVva25yOXA5OThwbQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2025 TuntunLaku. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>
